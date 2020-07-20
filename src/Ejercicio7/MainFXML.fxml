@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane prefHeight="829.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ejercicio7.MainFXMLController">
+   <center>
+      <TabPane fx:id="tpPaneles" prefHeight="506.0" prefWidth="622.0" style="-fx-background-color: gray;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="tabParametros" text="Parametros">
+               <content>
+                  <BorderPane prefHeight="492.0" prefWidth="622.0">
+                     <center>
+                        <StackPane BorderPane.alignment="CENTER" />
+                     </center>
+                     <bottom>
+                        <GridPane alignment="CENTER" prefHeight="110.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="11.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="187.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="126.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="114.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="121.0" minWidth="0.0" prefWidth="51.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="116.0" />
+                              <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="74.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="101.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="75.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="132.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="25.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="btnProbar" mnemonicParsing="false" onAction="#handleButtonProbar" text="Simular" GridPane.columnIndex="3" />
+                              <Label text="Cantidad de semanas a simular" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtCantSemanas" maxWidth="75.0" GridPane.columnIndex="2" />
+                              <Label text="Stock Inicial" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtStockInicial" maxWidth="75.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button fx:id="btnReiniciar" disable="true" mnemonicParsing="false" onAction="#handleButtonReiniciar" text="Reiniciar" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Separator orientation="VERTICAL" prefHeight="10.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Separator orientation="VERTICAL" prefHeight="10.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" />
+                                 </GridPane.margin>
+                              </Separator>
+                              <Label fx:id="lblAoMedia" text="P Rep 1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Label fx:id="lblBoDesviacion" text="P Rep 2" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtRep1" alignment="CENTER" maxWidth="75.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtRep2" alignment="CENTER" maxWidth="75.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                              <Label text="P Rep 4" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtRep3" alignment="CENTER" maxWidth="75.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                              <Label text="P Rep 3" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtRep4" alignment="CENTER" maxWidth="75.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                              <Button fx:id="bntParametros" mnemonicParsing="false" onAction="#handleButtonParametros" text="Param ON" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                              <Label fx:id="lblAoMedia1" text="Desde" GridPane.columnIndex="5" />
+                              <Label fx:id="lblAoMedia11" text="Hasta" GridPane.columnIndex="7" />
+                              <TextField fx:id="txtDesde" alignment="CENTER" maxWidth="75.0" GridPane.columnIndex="6" />
+                              <TextField fx:id="txtHasta" alignment="CENTER" maxWidth="75.0" GridPane.columnIndex="8" />
+                           </children>
+                        </GridPane>
+                     </bottom>
+                     <right>
+                        <GridPane prefHeight="589.0" prefWidth="118.0" visible="false" BorderPane.alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="44.79999198913574" minHeight="10.0" prefHeight="44.79999198913574" valignment="BOTTOM" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Serie Generada" />
+                              <ListView fx:id="txfSerieGenerada" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </ListView>
+                           </children>
+                        </GridPane>
+                     </right>
+                  </BorderPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabEstrategia1" text="Estrategia 1">
+            <content>
+                  <BorderPane>
+                     <center>
+                        <TableView id="tblTabla1" fx:id="tblTabla1" prefHeight="402.0" prefWidth="602.0">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <top>
+                        <GridPane prefHeight="73.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="20.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="Sumatoria de Chi-Cuadrado: " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES" />
+                              <Label maxWidth="1.7976931348623157E308" text="¿Acepta prueba Chi Cuadrado?:" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES" />
+                              <Label fx:id="lblEstadistico1" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="88.0" text=" " GridPane.columnIndex="2" />
+                              <Label fx:id="lblAceptaPrueba1" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </top>
+                  </BorderPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabEstrategia2" text="Estrategia 2">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <TableView id="tblTabla2" fx:id="tblTabla2" prefHeight="402.0" prefWidth="602.0">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <top>
+                        <GridPane prefHeight="73.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="20.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="Sumatoria de Chi-Cuadrado: " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES" />
+                              <Label maxWidth="1.7976931348623157E308" text="¿Acepta prueba Chi Cuadrado?:" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES" />
+                              <Label fx:id="lblEstadistico2" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="88.0" text=" " GridPane.columnIndex="2" />
+                              <Label fx:id="lblAceptaPrueba2" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </top>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabEstrategia3" text="Estrategia 3">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <TableView id="tblTabla3" fx:id="tblTabla3" prefHeight="402.0" prefWidth="602.0">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <top>
+                        <GridPane prefHeight="73.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="20.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="Sumatoria de Chi-Cuadrado: " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES" />
+                              <Label maxWidth="1.7976931348623157E308" text="¿Acepta prueba Chi Cuadrado?:" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES" />
+                              <Label fx:id="lblEstadistico3" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="88.0" text=" " GridPane.columnIndex="2" />
+                              <Label fx:id="lblAceptaPrueba3" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </top>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabEstrategia4" text="Estrategia 4">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <TableView id="tblTabla4" fx:id="tblTabla4" prefHeight="402.0" prefWidth="602.0">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <top>
+                        <GridPane prefHeight="73.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="20.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="Sumatoria de Chi-Cuadrado: " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES" />
+                              <Label maxWidth="1.7976931348623157E308" text="¿Acepta prueba Chi Cuadrado?:" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES" />
+                              <Label fx:id="lblEstadistico4" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="88.0" text=" " GridPane.columnIndex="2" />
+                              <Label fx:id="lblAceptaPrueba4" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </top>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
